@@ -13,14 +13,16 @@ public class GameEngine implements KeyListener{
 	GamePanel gp;
 		
 	private ArrayList<Enemy> enemies = new ArrayList<Enemy>();	
-	//private SpaceShip v;	
+	private SpaceShip v;	
 	private Timer timer;
 	private double difficulty = 0.1;
 
 	
-	public GameEngine(GamePanel gp) {
+	public GameEngine(GamePanel gp, SpaceShip v) {
 		this.gp = gp;
+		this.v = v;		
 		
+		gp.sprites.add(v);
 		
 		timer = new Timer(50, new ActionListener() {
 			
@@ -68,21 +70,11 @@ public class GameEngine implements KeyListener{
 	}
 	
 	
-	/*void controlVehicle(KeyEvent e) {
-		switch (e.getKeyCode()) {
-		case KeyEvent.VK_LEFT:
-			v.move(-1);
-			break;
-		case KeyEvent.VK_RIGHT:
-			v.move(1);
-			break;
-		}
-	}*/
+	
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		//donoting
-		
+		//do nothing
 	}
 
 	@Override
