@@ -70,11 +70,21 @@ public class GameEngine implements KeyListener{
 	}
 	
 	
-	
+	void controlVehicle(KeyEvent e) {
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_LEFT:
+			v.move(-1);
+			break;
+		case KeyEvent.VK_RIGHT:
+			v.move(1);
+			break;
+		}
+	}
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		//do nothing
+		controlVehicle(e);
+		
 	}
 
 	@Override
