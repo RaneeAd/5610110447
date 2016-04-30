@@ -6,7 +6,8 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-
+import java.awt.Toolkit;
+import java.awt.Image;
 public class SpaceShip extends Sprite{
 	
 	int step = 8;
@@ -15,8 +16,8 @@ public class SpaceShip extends Sprite{
 	}
 
 	public void draw(Graphics2D g) {
-		g.setColor(Color.BLUE);
-		g.fillRect(x, y, width, height);
+		Image img = Toolkit.getDefaultToolkit().getImage("rocket.gif");
+        g.drawImage(img, x, y, 50, 50, null);
 		
 		
 	}

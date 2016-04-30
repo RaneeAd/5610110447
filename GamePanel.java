@@ -26,7 +26,7 @@ public class GamePanel extends JPanel {
 		bigfade = (Graphics2D) bi.getGraphics();
 		//big.setBackground(Color.BLUE);
 		try{
-			background = ImageIO.read(new File("image.jpg"));
+			background = ImageIO.read(new File("GLZ.jpeg"));
 		}
 		catch(IOException d){
 
